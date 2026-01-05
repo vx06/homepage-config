@@ -1,0 +1,45 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Media:
+    - Redlib:
+        - abbr: RE
+          icon: redlib.png
+          href: "{{HOMEPAGE_VAR_BM_REDLIB}}"
+    - Invidious:
+        - abbr: YT
+          icon: invidious.png
+          href: "{{HOMEPAGE_VAR_BM_INVIDIOUS}}"
+    - Glance:
+        - abbr: GL
+          icon: glance.png
+          href: "{{HOMEPAGE_VAR_BM_GLANCE}}"
+
+- Dev:
+    - Github:
+        - abbr: GH
+          icon: github.png
+          href: https://github.com/
+    - Coolify:
+        - abbr: CO
+          icon: coolify.png
+          href: "{{HOMEPAGE_VAR_BM_COOLIFY}}"
+    - Deployment:
+        - abbr: DE
+          icon: svelte.png
+          href: "{{HOMEPAGE_VAR_BM_DEPLOYMENT}}"
+
+- Tools:
+    - IT Tools:
+        - abbr: IT
+          icon: it-tools.png
+          href: "{{HOMEPAGE_VAR_BM_ITTOOLS}}"
+    - Bento PDF:
+        - abbr: BP
+          icon: bentopdf.png
+          href: "{{HOMEPAGE_VAR_BM_BENTOPDF}}"
+    - 13ft:
+        - abbr: FT
+          icon: 13ft.png
+          href: "{{HOMEPAGE_VAR_BM_13FT}}"

@@ -1,0 +1,197 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Hosts:
+    - Beszel:
+        icon: beszel.png
+        description: Node 1
+        href: "{{HOMEPAGE_VAR_BESZEL_HREF}}"
+        widget:
+          type: beszel
+          url: "{{HOMEPAGE_VAR_BESZEL_URL}}"
+          username: "{{HOMEPAGE_VAR_BESZEL_USR}}" # email
+          password: "{{HOMEPAGE_VAR_BESZEL_PW}}"
+          systemId: "{{HOMEPAGE_VAR_BESZEL_NODE_ONE}}"  # optional
+          version: 2 # optional, default is 1
+          fields: ["name","status","cpu","memory"]
+    - Beszel:
+        icon: beszel.png
+        description: Node 2
+        href: "{{HOMEPAGE_VAR_BESZEL_HREF}}"
+        widget:
+          type: beszel
+          url: "{{HOMEPAGE_VAR_BESZEL_URL}}"
+          username: "{{HOMEPAGE_VAR_BESZEL_USR}}" # email
+          password: "{{HOMEPAGE_VAR_BESZEL_PW}}"
+          systemId: "{{HOMEPAGE_VAR_BESZEL_NODE_TWO}}" # optional
+          version: 2 # optional, default is 1
+          fields: ["name","status","cpu","memory"]
+    - Komodo:
+        icon: komodo.png
+        description: Docker Management
+        href: "{{HOMEPAGE_VAR_KOMODO_HREF}}"
+        widget:
+          type: komodo
+          url: "{{HOMEPAGE_VAR_KOMODO_URL}}"
+          key: "{{HOMEPAGE_VAR_KOMODO_KEY}}"
+          secret: "{{HOMEPAGE_VAR_KOMODO_SECRET}}"
+          showSummary: false # optional, default: false. Takes precedence over showStacks
+          showStacks: true #optional, default: false
+          fields: ["total","running","down","unhealthy"]
+    - Pangolin:
+        icon: pangolin.png
+        description: Reverse Proxy
+        href: "{{HOMEPAGE_VAR_PG_HREF}}"
+        widget:
+          type: pangolin
+          url: "{{HOMEPAGE_VAR_PG_URL}}"
+          key: "{{HOMEPAGE_VAR_PG_KEY}}"
+          org: "{{HOMEPAGE_VAR_PG_ORG}}"
+          fields: ["sites","resources","in","out"]
+
+- Mediaserver:
+    - Jellyfin:
+        icon: jellyfin.png
+        description: Movies & TV Shows
+        href: "{{HOMEPAGE_VAR_JF_HREF}}"
+        widget:
+          type: jellyfin
+          url: "{{HOMEPAGE_VAR_JF_URL}}"
+          key: "{{HOMEPAGE_VAR_JF_KEY}}"
+          enableBlocks: true # optional, defaults to false
+          enableNowPlaying: true # optional, defaults to true
+          enableUser: true # optional, defaults to false
+          enableMediaControl: true # optional, defaults to true
+          showEpisodeNumber: true # optional, defaults to false
+          expandOneStreamToTwoRows: true # optional, defaults to true
+    - Navidrome:
+        icon: navidrome.png
+        description: Music
+        href: "{{HOMEPAGE_VAR_NAVI_HREF}}"
+        widget:
+          type: navidrome
+          url: "{{HOMEPAGE_VAR_NAVI_URL}}"
+          user: "{{HOMEPAGE_VAR_NAVI_USR}}"
+          token: "{{HOMEPAGE_VAR_NAVI_TOKEN}}" #md5(password + salt)
+          salt: "{{HOMEPAGE_VAR_NAVI_SALT}}"
+    - Booklore:
+        # Temporary Solution until official Booklore API releases
+        # Bearer token changes quickly
+        description: eBooks
+        icon: book-lore
+        href: "{{HOMEPAGE_VAR_BL_HREF}}"
+        widget:
+          type: customapi
+          url: "{{HOMEPAGE_VAR_BL_URL}}"
+          headers:
+            Authorization: "{{HOMEPAGE_VAR_BL_BEARER}}"
+          method: GET
+          mappings:
+            - label: Books
+              format: size
+
+- Media Storage:
+    - Immich:
+        icon: immich.png
+        description: Images & Videos
+        href: "{{HOMEPAGE_VAR_IMMICH_HREF}}"
+        widget:
+          type: immich
+          url: "{{HOMEPAGE_VAR_IMMICH_URL}}"
+          key: "{{HOMEPAGE_VAR_IMMICH_KEY}}"
+          version: 2 # optional, default is 1
+          fields: ["users", "photos", "videos", "storage"]
+    - Nextcloud:
+        icon: nextcloud.png
+        description: File Storage
+        href: "{{HOMEPAGE_VAR_NC_HREF}}"
+        widget:
+          type: nextcloud
+          url: "{{HOMEPAGE_VAR_NC_URL}}"
+          key: "{{HOMEPAGE_VAR_NC_KEY}}"
+          fields: ["freespace","activeusers","numfiles","numshares"]
+
+- Media Automation:
+    - SABnzbd:
+        href: "{{HOMEPAGE_VAR_SAB_HREF}}"
+        icon: sabnzbd.png
+        description: News Reader
+        widget:
+          type: sabnzbd
+          url: "{{HOMEPAGE_VAR_SAB_URL}}"
+          key: "{{HOMEPAGE_VAR_SAB_KEY}}"
+          fields: ["rate", "queue", "timeleft"]
+
+- Networking:
+    - FritzBox:
+        icon: fritzbox.png
+        description: Router
+        href: "{{HOMEPAGE_VAR_FRITZ_HREF}}"
+        widgets:
+          - type: fritzbox
+            url: "{{HOMEPAGE_VAR_FRITZ_URL}}"
+            fields: ["down", "up", "received","sent"]
+          - type: fritzbox
+            url: "{{HOMEPAGE_VAR_FRITZ_URL}}"
+            fields: ["connectionStatus", "externalIPAddress","maxDown","maxUp"]
+    - Adguard:
+        icon: adguard-home.png
+        description: DNS
+        href: "{{HOMEPAGE_VAR_AH_HREF}}"
+        widget:
+          type: adguard
+          url: "{{HOMEPAGE_VAR_AH_URL}}"
+          username: "{{HOMEPAGE_VAR_AH_USR}}"
+          password: "{{HOMEPAGE_VAR_AH_PW}}"
+          fields: ["queries", "blocked", "filtered", "latency"]
+    - Wireguard:
+        icon: wireguard.png
+        description: Home VPN
+        href: "{{HOMEPAGE_VAR_WG_URL}}"
+        widget:
+          type: wgeasy
+          url: "{{HOMEPAGE_VAR_WG_URL}}"
+          version: 1 # optional, default is 1
+          password: "{{HOMEPAGE_VAR_WG_PW}}"
+          threshold: 3 # optional
+          fields: ["connected", "enabled", "disabled", "total"]
+
+- Finance:
+    - Ghostfolio:
+        icon: ghostfolio.png
+        description: Portfolio
+        href: "{{HOMEPAGE_VAR_GF_HREF}}"
+        widget:
+          type: ghostfolio
+          url: "{{HOMEPAGE_VAR_GF_URL}}"
+          key: "{{HOMEPAGE_VAR_GF_BEARER}}"
+          fields: ["net_worth"]
+    - Firefly:
+        icon: firefly.png
+        description: Cash
+        href: "{{HOMEPAGE_VAR_FIII_HREF}}"
+        widget:
+          type: firefly
+          url: "{{HOMEPAGE_VAR_FIII_URL}}"
+          key: "{{HOMEPAGE_VAR_FIII_KEY}}"
+          fields: ["budget", "networth"]
+    - Wallos:
+        icon: wallos.png
+        description: Subscriptions
+        href: "{{HOMEPAGE_VAR_WALLOS_HREF}}"
+        widget:
+          type: wallos
+          url: "{{HOMEPAGE_VAR_WALLOS_URL}}"
+          key: "{{HOMEPAGE_VAR_WALLOS_KEY}}"
+          fields: ["activeSubscriptions","nextRenewingSubscription","thisMonthlyCost","nextMonthlyCost"]
+
+- Gaming:
+    - Minecraft:
+        icon: minecraft.png
+        description: Minecraft Servers
+        widgets:
+          - type: minecraft
+            url: "{{HOMEPAGE_VAR_MC_URL_ONE}}"
+          - type: minecraft
+            url: "{{HOMEPAGE_VAR_MC_URL_TWO}}"

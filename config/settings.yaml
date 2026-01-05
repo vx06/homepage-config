@@ -1,0 +1,65 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/settings/
+
+
+
+title: "{{HOMEPAGE_VAR_TITLE}}"
+
+background:
+  image: https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/purpled-night.jpg 
+  opacity: 80
+  #brightness: 1
+  #blur: xs
+
+color: gray
+
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+  showSearchSuggestions: true
+  hideVisitURL: true
+  provider: custom # google, duckduckgo, bing, baidu, brave or custom
+  url: "{{HOMEPAGE_VAR_SEARCH_URL}}"
+  target: _blank
+
+target: _blank
+
+theme: dark
+
+disableIndexing: true
+
+disableCollapse: true
+
+headerStyle: boxed
+
+layout:
+  Hosts:
+    style: row
+    columns: 4
+
+  Mediaserver:
+    tab: Media
+    style: column
+
+  Media Storage:
+    tab: Media
+    style: column
+
+  Media Automation:
+    tab: Media
+    style: row
+    columns: 3
+
+  Networking:
+    tab: Networking
+    style: row
+    columns: 3
+
+  Gaming:
+    tab: Services
+
+  Finance:
+    tab: Services
+    style: row
+    columns: 3
