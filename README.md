@@ -3,7 +3,6 @@
 My dashboard configuration for [gethomepage/homepage](https://github.com/gethomepage/homepage/). Everything is set up with Docker Compose, environment variables and custom CSS.
 
 ## Work In Progress
-- [ ] License
 - [ ] improve env variable naming
 - [ ] add screenshots
 - [ ] catpuccin mocha themed icons
@@ -60,7 +59,7 @@ Here is a list of some environment variables and their meaning from my configura
 | `HOMEPAGE_VAR_SERVICE_URL` | The URL of the service, usually local-ip:port. |
 | `HOMEPAGE_VAR_SERVICE_USR`     | Username to access the service.     |
 | `HOMEPAGE_VAR_SERVICE_PW`     | Password to access the service.     |
-| `HOMEPAGE_VAR_KOMODO_KEY`     | API Key to access the service.      |
+| `HOMEPAGE_VAR_SERVICE_KEY`     | API Key to access the service.      |
 | ...                                  | ...                                    |
 
 ---
@@ -77,4 +76,4 @@ More catpuccin mocha wallpapers by [orangci](https://github.com/orangci) can be 
 
 ## License
 
-todo.
+This project is licensed under the MIT License. SSee the [LICENSE](./LICENSE) file for more details. 
