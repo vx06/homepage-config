@@ -4,8 +4,7 @@ My dashboard configuration for [gethomepage/homepage](https://github.com/gethome
 
 ## Work In Progress
 - [ ] improve env variable naming
-- [ ] add screenshots
-- [ ] catpuccin mocha themed icons
+- [ ] catppuccin mocha themed icons
 - [ ] clean up custom.css file
 - [ ] more widgets and bookmarks
 
@@ -66,11 +65,11 @@ Here is a list of some environment variables and their meaning from my configura
 
 ### Custom Theme
 
-My configuration includes a custom CSS theme in [catpuccin mocha style](https://catppuccin.com/palette/)
+My configuration includes a custom CSS theme in [catppuccin mocha style](https://catppuccin.com/palette/)
 
 You can customize the `custom.css` file to your liking.
 
-More catpuccin mocha wallpapers by [orangci](https://github.com/orangci) can be found [here](https://github.com/orangci/walls-catppuccin-mocha).
+More catppuccin mocha wallpapers by [orangci](https://github.com/orangci) can be found [here](https://github.com/orangci/walls-catppuccin-mocha).
 
 
 ## License
