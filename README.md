@@ -11,7 +11,7 @@ My dashboard configuration for [gethomepage/homepage](https://github.com/gethome
 
 ## Screenshots
 
-Coming soon.
+![Homepage Screenshot 1](./images/homepage_media.png)
 
 ## Get Started
 
@@ -72,8 +72,7 @@ You can customize the `custom.css` file to your liking.
 
 More catpuccin mocha wallpapers by [orangci](https://github.com/orangci) can be found [here](https://github.com/orangci/walls-catppuccin-mocha).
 
----
 
 ## License
 
-This project is licensed under the MIT License. SSee the [LICENSE](./LICENSE) file for more details. 
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details. 
