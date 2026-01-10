@@ -35,6 +35,7 @@ headerStyle: boxed
 
 layout:
   Hosts:
+    tab: System
     style: row
     columns: 4
 
@@ -42,14 +43,13 @@ layout:
     tab: Media
     style: column
 
-  Media Storage:
+  File Storage:
     tab: Media
     style: column
 
   Media Automation:
     tab: Media
-    style: row
-    columns: 3
+    style: column
 
   Networking:
     tab: Networking
@@ -58,8 +58,13 @@ layout:
 
   Gaming:
     tab: Services
+    style: column
 
   Finance:
     tab: Services
-    style: row
+    style: column
     columns: 3
+
+  Productivity:
+    tab: Services
+    style: column

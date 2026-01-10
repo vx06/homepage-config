@@ -91,7 +91,7 @@
             - label: Books
               format: size
 
-- Media Storage:
+- File Storage:
     - Immich:
         icon: immich.png
         description: Images & Videos
@@ -195,3 +195,13 @@
             url: "{{HOMEPAGE_VAR_MC_URL_ONE}}"
           - type: minecraft
             url: "{{HOMEPAGE_VAR_MC_URL_TWO}}"
+
+- Productivity:
+    - Karakeep:
+        description: Bookmarks
+        href: "{{HOMEPAGE_VAR_KARAKEEP_HREF}}"
+        widget:
+          type: karakeep
+          url: "{{HOMEPAGE_VAR_KARAKEEP_URL}}"
+          key: "{{HOMEPAGE_VAR_KARAKEEP_KEY}}"
+          fields: ["bookmarks", "archived", "lists", "tags"]
