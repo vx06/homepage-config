@@ -3,6 +3,29 @@
 # https://gethomepage.dev/configs/services/
 
 - Hosts:
+    - Proxmox:
+        icon: proxmox.png
+        description: Node 1
+        href: "{{HOMEPAGE_VAR_PVE_HREF}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PVE_URL}}"
+          username: "{{HOMEPAGE_VAR_PVE_USR}}"
+          password: "{{HOMEPAGE_VAR_PVE_PW}}"
+          node: pve01 # optional
+          fields: ["vms", "lxc", "resources.cpu", "resources.mem"]
+    - Proxmox:
+        icon: proxmox.png
+        description: Node 2
+        href: "{{HOMEPAGE_VAR_PVE_HREF}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PVE_URL}}"
+          username: "{{HOMEPAGE_VAR_PVE_USR}}"
+          password: "{{HOMEPAGE_VAR_PVE_PW}}"
+          node: pve02 # optional
+          fields: ["vms", "lxc", "resources.cpu", "resources.mem"]
+- Monitoring:
     - Beszel:
         icon: beszel.png
         description: Node 1
@@ -26,7 +49,16 @@
           password: "{{HOMEPAGE_VAR_BESZEL_PW}}"
           systemId: "{{HOMEPAGE_VAR_BESZEL_NODE_TWO}}" # optional
           version: 2 # optional, default is 1
-          fields: ["name","status","cpu","memory"]
+          fields: ["name","status","cpu","memory"]  
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        description: Uptime Monitoring
+        href: "{{HOMEPAGE_VAR_UPTIME_HREF}}"
+        widget:
+          type: uptimekuma
+          url: "{{HOMEPAGE_VAR_UPTIME_URL}}"
+          slug: "{{HOMEPAGE_VAR_UPTIME_SLUG}}"
+- Management:
     - Komodo:
         icon: komodo.png
         description: Docker Management
@@ -36,9 +68,10 @@
           url: "{{HOMEPAGE_VAR_KOMODO_URL}}"
           key: "{{HOMEPAGE_VAR_KOMODO_KEY}}"
           secret: "{{HOMEPAGE_VAR_KOMODO_SECRET}}"
-          showSummary: false # optional, default: false. Takes precedence over showStacks
+          showSummary: false # optional, default: false. Takes precedence over showStacks, uses ["servers","stacks","containers"]
           showStacks: true #optional, default: false
-          fields: ["total","running","down","unhealthy"]
+          fields: ["total", "running", "down", "unhealthy"]
+# add Semaphore, Backup Management here
     - Pangolin:
         icon: pangolin.png
         description: Reverse Proxy
@@ -49,6 +82,8 @@
           key: "{{HOMEPAGE_VAR_PG_KEY}}"
           org: "{{HOMEPAGE_VAR_PG_ORG}}"
           fields: ["sites","resources","in","out"]
+# NPM local https
+
 
 - Mediaserver:
     - Jellyfin:
@@ -76,20 +111,15 @@
           token: "{{HOMEPAGE_VAR_NAVI_TOKEN}}" #md5(password + salt)
           salt: "{{HOMEPAGE_VAR_NAVI_SALT}}"
     - Booklore:
-        # Temporary Solution until official Booklore API releases
-        # Bearer token changes quickly
         description: eBooks
         icon: book-lore
         href: "{{HOMEPAGE_VAR_BL_HREF}}"
         widget:
-          type: customapi
+          type: booklore
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_BL_URL}}"
-          headers:
-            Authorization: "{{HOMEPAGE_VAR_BL_BEARER}}"
-          method: GET
-          mappings:
-            - label: Books
-              format: size
+          username: "{{HOMEPAGE_VAR_BL_USR}}"
+          password: "{{HOMEPAGE_VAR_BL_PW}}"
 
 - File Storage:
     - Immich:
@@ -122,6 +152,83 @@
           url: "{{HOMEPAGE_VAR_SAB_URL}}"
           key: "{{HOMEPAGE_VAR_SAB_KEY}}"
           fields: ["rate", "queue", "timeleft"]
+    - Jellyseerr:
+        href: "{{HOMEPAGE_VAR_SEERR_HREF}}"
+        icon: jellyseerr.png
+        description: Media Requests
+        widget:
+          type: jellyseerr
+          url: "{{HOMEPAGE_VAR_SEERR_URL}}"
+          key: "{{HOMEPAGE_VAR_SEERR_KEY}}"
+          fields: ["pending", "approved", "available", "issues"]
+    
+    - Prowlarr:
+        href: "{{HOMEPAGE_VAR_PROWLARR_HREF}}"
+        icon: prowlarr.png
+        description: Search Automation
+        widget:
+          type: prowlarr
+          url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
+          key: "{{HOMEPAGE_VAR_PROWLARR_KEY}}"
+          fields: ["numberOfGrabs", "numberOfQueries", "numberOfFailGrabs", "numberOfFailQueries"]
+    
+    - Radarr:
+        href: "{{HOMEPAGE_VAR_RADARR_HREF}}"
+        icon: radarr.png
+        description: Movie Automation
+        widget:
+          type: radarr
+          url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+          key: "{{HOMEPAGE_VAR_RADARR_KEY}}"
+          enableQueue: true # optional, defaults to false
+          fields: ["wanted", "missing", "queued", "movies"]
+    
+    - Sonarr:
+        href: "{{HOMEPAGE_VAR_SONARR_HREF}}"
+        icon: sonarr.png
+        description: Series Automation
+        widget:
+          type: sonarr
+          url: "{{HOMEPAGE_VAR_SONARR_URL}}"
+          key: "{{HOMEPAGE_VAR_SONARR_KEY}}"
+          enableQueue: true # optional, defaults to false
+          fields: ["wanted", "queued", "series"]
+    
+    - Readarr:
+        href: "{{HOMEPAGE_VAR_READARR_HREF}}"
+        icon: readarr.png
+        description: Book Automation
+        widget:
+          type: readarr
+          url: "{{HOMEPAGE_VAR_READARR_URL}}"
+          key: "{{HOMEPAGE_VAR_READARR_KEY}}"
+          fields: ["wanted", "queued", "books"]
+
+- Calendar:
+    - Calendar:
+        widget:
+          type: calendar
+          firstDayInWeek: monday # optional - defaults to monday
+          view: agenda # optional - possible values monthly, agenda
+          maxEvents: 10 # optional - defaults to 10
+          showTime: true # optional - show time for event happening today - defaults to false
+          timezone: Europe/Berlin # optional and only when timezone is not detected properly (slightly slower performance) - force timezone for ical events (if it's the same - no change, if missing or different in ical - will be converted to this timezone)
+          integrations: # optional
+            - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+              service_group: Media Automation # group name where widget exists
+              service_name: Sonarr # service name for that widget
+              color: gray # optional - defaults to pre-defined color for the service (teal for sonarr)
+              baseUrl: "{{HOMEPAGE_VAR_SONARR_HREF}}" # optional - adds links to sonarr/radarr pages
+              params: # optional - additional params for the service
+                unmonitored: true # optional - defaults to false, used with *arr stack
+            - type: radarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
+              service_group: Media Automation # group name where widget exists
+              service_name: Radarr # service name for that widget
+              color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
+              baseUrl: "{{HOMEPAGE_VAR_RADARR_HREF}}" # optional - adds links to sonarr/radarr pages
+              params: # optional - additional params for the service
+                unmonitored: true # optional - defaults to false, used with *arr stack
+
 
 - Networking:
     - FritzBox:
@@ -164,6 +271,7 @@
         href: "{{HOMEPAGE_VAR_GF_HREF}}"
         widget:
           type: ghostfolio
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_GF_URL}}"
           key: "{{HOMEPAGE_VAR_GF_BEARER}}"
           fields: ["net_worth"]
@@ -182,6 +290,7 @@
         href: "{{HOMEPAGE_VAR_WALLOS_HREF}}"
         widget:
           type: wallos
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_WALLOS_URL}}"
           key: "{{HOMEPAGE_VAR_WALLOS_KEY}}"
           fields: ["activeSubscriptions","nextRenewingSubscription","thisMonthlyCost","nextMonthlyCost"]
@@ -193,8 +302,10 @@
         widgets:
           - type: minecraft
             url: "{{HOMEPAGE_VAR_MC_URL_ONE}}"
+            hideErrors: true
           - type: minecraft
             url: "{{HOMEPAGE_VAR_MC_URL_TWO}}"
+            hideErrors: true
 
 - Productivity:
     - Karakeep:
@@ -202,6 +313,7 @@
         href: "{{HOMEPAGE_VAR_KARAKEEP_HREF}}"
         widget:
           type: karakeep
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_KARAKEEP_URL}}"
           key: "{{HOMEPAGE_VAR_KARAKEEP_KEY}}"
           fields: ["bookmarks", "archived", "lists", "tags"]
