@@ -7,21 +7,20 @@
 title: "{{HOMEPAGE_VAR_TITLE}}"
 
 background:
-  image: https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/purpled-night.jpg 
-  opacity: 80
-  #brightness: 1
-  #blur: xs
+  image: https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg 
+#  #brightness: 1
+#  #blur: xs
 
 color: gray
 
-quicklaunch:
-  searchDescriptions: true
-  hideInternetSearch: true
-  showSearchSuggestions: true
-  hideVisitURL: true
-  provider: custom # google, duckduckgo, bing, baidu, brave or custom
-  url: "{{HOMEPAGE_VAR_SEARCH_URL}}"
-  target: _blank
+#quicklaunch:
+#  searchDescriptions: true
+#  hideInternetSearch: true
+#  showSearchSuggestions: true
+#  hideVisitURL: true
+#  provider: custom # google, duckduckgo, bing, baidu, brave or custom
+#  url: "{{HOMEPAGE_VAR_SEARCH_URL}}"
+#  target: _blank
 
 target: _blank
 
@@ -31,31 +30,49 @@ disableIndexing: true
 
 disableCollapse: true
 
-headerStyle: boxed
+headerStyle: underlined
 
 layout:
+# System Tab
   Hosts:
     tab: System
     style: row
-    columns: 4
-
-  Mediaserver:
-    tab: Media
-    style: column
-
-  File Storage:
-    tab: Media
-    style: column
-
-  Media Automation:
-    tab: Media
+    columns: 2
+  
+  Monitoring:
+    tab: System
     style: column
 
   Networking:
-    tab: Networking
+    tab: System
+    style: column
+  
+  Management:
+    tab: System
+    style: column
+
+# Media Tab
+  Mediaserver:
+    tab: Media
     style: row
     columns: 3
 
+  File Storage:
+    tab: Media
+    style: row
+    columns: 3
+
+  Media Automation:
+    tab: Media
+    style: row
+    columns: 3
+
+  Calendar:
+    tab: Media
+    style: row
+    columns: 2
+
+# Services Tab
   Gaming:
     tab: Services
     style: column

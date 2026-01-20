@@ -2,6 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/info-widgets/
 
+
 - resources:
     cpu: false
     memory: false
@@ -9,26 +10,27 @@
 - logo:
     icon: homepage
 
-#- greeting:
-#    text_size: md
-#    text: zl1.dev
+- greeting:
+    text_size: lg
+    text: Homelab
 
-- search:
-    provider: custom # google, duckduckgo, bing, baidu, brave or custom
-    url: "{{HOMEPAGE_VAR_SEARCH_URL}}"
-    target: _blank
+#- search:
+#    provider: custom # google, duckduckgo, bing, baidu, brave or custom
+#    url: "{{HOMEPAGE_VAR_SEARCH_URL}}"
+#    target: _blank
 
-#- datetime:
-#    text_size: xm
-#    format:
-#      timeStyle: short
+- datetime:
+    text_size: xm
+    format:
+      dateStyle: full
+      timeStyle: short
 
-- openmeteo:
-    label: "{{HOMEPAGE_VAR_CITY}}" # optional
-    latitude: "{{HOMEPAGE_VAR_LATITUDE}}"
-    longitude: "{{HOMEPAGE_VAR_LONGITUDE}}"
-    timezone: Europe/Berlin # optional
-    units: metric # or imperial
-    cache: 5 # Time in minutes to cache API responses, to stay within limits
-    format: # optional, Intl.NumberFormat options
-      maximumFractionDigits: 1
+#- openmeteo:
+#    label: "{{HOMEPAGE_VAR_CITY}}" # optional
+#    latitude: "{{HOMEPAGE_VAR_LATITUDE}}"
+#    longitude: "{{HOMEPAGE_VAR_LONGITUDE}}"
+#    timezone: Europe/Berlin # optional
+#    units: metric # or imperial
+#    cache: 5 # Time in minutes to cache API responses, to stay within limits
+#    format: # optional, Intl.NumberFormat options
+#      maximumFractionDigits: 1
