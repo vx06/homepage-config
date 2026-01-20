@@ -3,15 +3,17 @@
 My dashboard configuration for [gethomepage/homepage](https://github.com/gethomepage/homepage/). Everything is set up with Docker Compose, environment variables and custom CSS.
 
 ## Work In Progress
-- [ ] Radarr, Sonarr, Readarr, Prowlarr, Tdarr, slskd, calendar
-- [ ] Proxmox, Uptime Kuma, NPM, scutiny, authentik
+- [ ] Tdarr, slskd
+- [ ] authentik widget
 - [ ] Vikunja, Tandoor, miniflux, lubeloggerr
-- [ ] missing services with custom api if possible
+- [ ] missing service widgets, custom apis, bookmarks
 - [ ] improve env variable naming
-- [ ] catppuccin mocha themed icons
-- [ ] clean up custom.css file
-- [ ] Improve custom CSS
+- [ ] themed icons
+- [ ] clean up custom.css file (catppuccin mocha part)
 - [ ] new screenshots
+- [ ] (theme switcher?)
+
+*might keep catppuccin mocha as secondary theme inside the custom.css file, theme switcher functionality would be nice...
 
 ## Screenshots
 
@@ -70,12 +72,12 @@ Here is a list of some environment variables and their meaning from my configura
 
 ### Custom Theme
 
-My configuration includes a custom CSS theme in [catppuccin mocha style](https://catppuccin.com/palette/)
+My configuration includes a custom CSS theme in [catppuccin mocha style](https://catppuccin.com/palette/).
+I no longer use catppuccin mocha as my primary theme, but I plan on keeping it in the custom.css file. Might have to configure theme switching functionality so I can use both my black + cyan theme and my catppuccin mocha theme.
 
 You can customize the `custom.css` file to your liking.
 
-More catppuccin mocha wallpapers by [orangci](https://github.com/orangci) can be found [here](https://github.com/orangci/walls-catppuccin-mocha).
-
+catppuccin mocha wallpapers by [orangci](https://github.com/orangci) can be found [here](https://github.com/orangci/walls-catppuccin-mocha).
 
 ## License
 
