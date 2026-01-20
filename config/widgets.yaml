@@ -22,7 +22,6 @@
 - datetime:
     text_size: xm
     format:
-      dateStyle: full
       timeStyle: short
 
 #- openmeteo:

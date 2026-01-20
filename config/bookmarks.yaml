@@ -5,41 +5,41 @@
 - Media:
     - Redlib:
         - abbr: RE
-          icon: redlib.png
+          icon: sh-redlib-light.png
           href: "{{HOMEPAGE_VAR_BM_REDLIB}}"
     - Invidious:
         - abbr: YT
-          icon: invidious.png
+          icon: sh-invidious-light.png
           href: "{{HOMEPAGE_VAR_BM_INVIDIOUS}}"
     - Glance:
         - abbr: GL
-          icon: glance.png
+          icon: sh-glance-light.png
           href: "{{HOMEPAGE_VAR_BM_GLANCE}}"
 
 - Dev:
     - Github:
         - abbr: GH
-          icon: github.png
+          icon: sh-github-light.png
           href: https://github.com/
     - Coolify:
         - abbr: CO
-          icon: coolify.png
+          icon: sh-coolify-light.png
           href: "{{HOMEPAGE_VAR_BM_COOLIFY}}"
     - Deployment:
         - abbr: DE
-          icon: svelte.png
+          icon: si-svelte
           href: "{{HOMEPAGE_VAR_BM_DEPLOYMENT}}"
 
 - Tools:
     - IT Tools:
         - abbr: IT
-          icon: it-tools.png
+          icon: sh-it-tools-light.png
           href: "{{HOMEPAGE_VAR_BM_ITTOOLS}}"
     - Bento PDF:
         - abbr: BP
-          icon: bentopdf.png
+          icon: sh-bentopdf-light.png
           href: "{{HOMEPAGE_VAR_BM_BENTOPDF}}"
-    - 13ft:
-        - abbr: FT
-          icon: 13ft.png
-          href: "{{HOMEPAGE_VAR_BM_13FT}}"
+    - Vert:
+        - abbr: Vert
+          icon: sh-vert-light.png
+          href: "{{HOMEPAGE_VAR_BM_VERT}}"

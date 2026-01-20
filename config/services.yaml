@@ -4,7 +4,7 @@
 
 - Hosts:
     - Proxmox:
-        icon: proxmox.png
+        icon: sh-proxmox-light.png
         description: Node 1
         href: "{{HOMEPAGE_VAR_PVE_HREF}}"
         widget:
@@ -15,7 +15,7 @@
           node: pve01 # optional
           fields: ["vms", "lxc", "resources.cpu", "resources.mem"]
     - Proxmox:
-        icon: proxmox.png
+        icon: sh-proxmox-light.png
         description: Node 2
         href: "{{HOMEPAGE_VAR_PVE_HREF}}"
         widget:
@@ -27,7 +27,7 @@
           fields: ["vms", "lxc", "resources.cpu", "resources.mem"]
 - Monitoring:
     - Beszel:
-        icon: beszel.png
+        icon: sh-beszel-light.png
         description: Node 1
         href: "{{HOMEPAGE_VAR_BESZEL_HREF}}"
         widget:
@@ -39,7 +39,7 @@
           version: 2 # optional, default is 1
           fields: ["name","status","cpu","memory"]
     - Beszel:
-        icon: beszel.png
+        icon: sh-beszel-light.png
         description: Node 2
         href: "{{HOMEPAGE_VAR_BESZEL_HREF}}"
         widget:
@@ -51,7 +51,7 @@
           version: 2 # optional, default is 1
           fields: ["name","status","cpu","memory"]  
     - Uptime Kuma:
-        icon: uptime-kuma.png
+        icon: sh-uptime-kuma-light.png
         description: Uptime Monitoring
         href: "{{HOMEPAGE_VAR_UPTIME_HREF}}"
         widget:
@@ -60,7 +60,7 @@
           slug: "{{HOMEPAGE_VAR_UPTIME_SLUG}}"
 - Management:
     - Komodo:
-        icon: komodo.png
+        icon: sh-komodo-light.png
         description: Docker Management
         href: "{{HOMEPAGE_VAR_KOMODO_HREF}}"
         widget:
@@ -73,7 +73,7 @@
           fields: ["total", "running", "down", "unhealthy"]
 # add Semaphore, Backup Management here
     - Pangolin:
-        icon: pangolin.png
+        icon: sh-pangolin-light.png
         description: Reverse Proxy
         href: "{{HOMEPAGE_VAR_PG_HREF}}"
         widget:
@@ -87,7 +87,7 @@
 
 - Mediaserver:
     - Jellyfin:
-        icon: jellyfin.png
+        icon: sh-jellyfin-light.png
         description: Movies & TV Shows
         href: "{{HOMEPAGE_VAR_JF_HREF}}"
         widget:
@@ -101,7 +101,7 @@
           showEpisodeNumber: true # optional, defaults to false
           expandOneStreamToTwoRows: true # optional, defaults to true
     - Navidrome:
-        icon: navidrome.png
+        icon: sh-navidrome-light.png
         description: Music
         href: "{{HOMEPAGE_VAR_NAVI_HREF}}"
         widget:
@@ -112,7 +112,7 @@
           salt: "{{HOMEPAGE_VAR_NAVI_SALT}}"
     - Booklore:
         description: eBooks
-        icon: book-lore
+        icon: sh-booklore-light.png
         href: "{{HOMEPAGE_VAR_BL_HREF}}"
         widget:
           type: booklore
@@ -123,7 +123,7 @@
 
 - File Storage:
     - Immich:
-        icon: immich.png
+        icon: sh-immich-light.png
         description: Images & Videos
         href: "{{HOMEPAGE_VAR_IMMICH_HREF}}"
         widget:
@@ -133,7 +133,7 @@
           version: 2 # optional, default is 1
           fields: ["users", "photos", "videos", "storage"]
     - Nextcloud:
-        icon: nextcloud.png
+        icon: sh-nextcloud-light.png
         description: File Storage
         href: "{{HOMEPAGE_VAR_NC_HREF}}"
         widget:
@@ -145,16 +145,30 @@
 - Media Automation:
     - SABnzbd:
         href: "{{HOMEPAGE_VAR_SAB_HREF}}"
-        icon: sabnzbd.png
+        icon: sh-sabnzbd-light.png
         description: News Reader
         widget:
           type: sabnzbd
           url: "{{HOMEPAGE_VAR_SAB_URL}}"
           key: "{{HOMEPAGE_VAR_SAB_KEY}}"
           fields: ["rate", "queue", "timeleft"]
+    - qBittorrent:
+        href: "{{HOMEPAGE_VAR_QBIT_HREF}}"
+        description: Linux ISO Downloader
+        icon: sh-qbittorrent-light.png
+        widget:
+          type: qbittorrent
+          hideErrors: true
+          url: "{{HOMEPAGE_VAR_QBIT_URL}}"
+          username: "{{HOMEPAGE_VAR_QBIT_USR}}"
+          password: "{{HOMEPAGE_VAR_QBIT_PW}}"
+          enableLeechProgress: true # optional, defaults to false
+          enableLeechSize: true # optional, defaults to false
+          fields: ["leech", "download", "seed", "upload"]
+
     - Jellyseerr:
         href: "{{HOMEPAGE_VAR_SEERR_HREF}}"
-        icon: jellyseerr.png
+        icon: sh-jellyseerr-light.png
         description: Media Requests
         widget:
           type: jellyseerr
@@ -164,7 +178,7 @@
     
     - Prowlarr:
         href: "{{HOMEPAGE_VAR_PROWLARR_HREF}}"
-        icon: prowlarr.png
+        icon: sh-prowlarr-light.png
         description: Search Automation
         widget:
           type: prowlarr
@@ -174,7 +188,7 @@
     
     - Radarr:
         href: "{{HOMEPAGE_VAR_RADARR_HREF}}"
-        icon: radarr.png
+        icon: sh-radarr-light.png
         description: Movie Automation
         widget:
           type: radarr
@@ -185,7 +199,7 @@
     
     - Sonarr:
         href: "{{HOMEPAGE_VAR_SONARR_HREF}}"
-        icon: sonarr.png
+        icon: sh-sonarr-light.png
         description: Series Automation
         widget:
           type: sonarr
@@ -196,7 +210,7 @@
     
     - Readarr:
         href: "{{HOMEPAGE_VAR_READARR_HREF}}"
-        icon: readarr.png
+        icon: sh-readarr-light.png
         description: Book Automation
         widget:
           type: readarr
@@ -232,7 +246,7 @@
 
 - Networking:
     - FritzBox:
-        icon: fritzbox.png
+        icon: sh-fritz-light.png
         description: Router
         href: "{{HOMEPAGE_VAR_FRITZ_HREF}}"
         widgets:
@@ -243,7 +257,7 @@
             url: "{{HOMEPAGE_VAR_FRITZ_URL}}"
             fields: ["connectionStatus", "externalIPAddress","maxDown","maxUp"]
     - Adguard:
-        icon: adguard-home.png
+        icon: sh-adguard-home-light.png
         description: DNS
         href: "{{HOMEPAGE_VAR_AH_HREF}}"
         widget:
@@ -253,7 +267,7 @@
           password: "{{HOMEPAGE_VAR_AH_PW}}"
           fields: ["queries", "blocked", "filtered", "latency"]
     - Wireguard:
-        icon: wireguard.png
+        icon: sh-wireguard-light.png
         description: Home VPN
         href: "{{HOMEPAGE_VAR_WG_URL}}"
         widget:
@@ -266,7 +280,7 @@
 
 - Finance:
     - Ghostfolio:
-        icon: ghostfolio.png
+        icon: sh-ghostfolio-light.png
         description: Portfolio
         href: "{{HOMEPAGE_VAR_GF_HREF}}"
         widget:
@@ -276,7 +290,7 @@
           key: "{{HOMEPAGE_VAR_GF_BEARER}}"
           fields: ["net_worth"]
     - Firefly:
-        icon: firefly.png
+        icon: sh-firefly-iii-light.png
         description: Cash
         href: "{{HOMEPAGE_VAR_FIII_HREF}}"
         widget:
@@ -285,7 +299,7 @@
           key: "{{HOMEPAGE_VAR_FIII_KEY}}"
           fields: ["budget", "networth"]
     - Wallos:
-        icon: wallos.png
+        icon: sh-wallos-light.png
         description: Subscriptions
         href: "{{HOMEPAGE_VAR_WALLOS_HREF}}"
         widget:
@@ -297,7 +311,7 @@
 
 - Gaming:
     - Minecraft:
-        icon: minecraft.png
+        icon: sh-minecraft-light.png
         description: Minecraft Servers
         widgets:
           - type: minecraft
@@ -310,6 +324,7 @@
 - Productivity:
     - Karakeep:
         description: Bookmarks
+        icon: sh-karakeep-light.png
         href: "{{HOMEPAGE_VAR_KARAKEEP_HREF}}"
         widget:
           type: karakeep
@@ -317,3 +332,13 @@
           url: "{{HOMEPAGE_VAR_KARAKEEP_URL}}"
           key: "{{HOMEPAGE_VAR_KARAKEEP_KEY}}"
           fields: ["bookmarks", "archived", "lists", "tags"]
+
+    - Tandoor:
+        description: Recipe Management
+        href: "{{HOMEPAGE_VAR_TANDOOR_HREF}}"
+        icon: sh-tandoor-recipes-light.png
+        widget:
+          type: tandoor
+          url: "{{HOMEPAGE_VAR_TANDOOR_URL}}"
+          key: "{{HOMEPAGE_VAR_TANDOOR_KEY}}"
+
