@@ -1,3 +1,222 @@
+/* == NEW BLACK CYAN THEME CSS == */
+/*==================================
+  FONT IMPORTS
+==================================*/
+@import url('https://fonts.cdnfonts.com/css/jetbrains-mono');
+
+/*==================================
+  FONT FAMILY
+==================================*/
+:root {
+  --my-font: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/*==================================
+  CSS VARIABLES
+==================================*/
+:root {
+  --tabs-border-color: #00fcff;
+  --widgets-border-color: #00fcff;
+  --cards-border-color: #00fcff;
+  --bookmarks-border-color: #00fcff;
+  --border-width: 2px;
+  --border-radius: .5rem;
+  --animation-time: 10s;
+}
+
+/*==================================
+  BASE STYLES
+==================================*/
+
+/* Global Styles */
+* {
+  font-family: var(--my-font) !important;
+  color: #00fcff !important;
+}
+
+/* Background */
+#page_container {
+  background-color: #000000;
+}
+
+/*==================================
+  ELEMENT STYLES
+==================================*/
+
+#information-widgets * {
+  color: cyan;
+}
+
+.border-b-2 {
+  border-bottom-color: cyan;
+}
+
+/* Logo size and positioning */
+.information-widget-logo img {
+  width: 32px !important;  
+  height: 32px !important;
+  max-width: none;   
+  max-height: none;     
+  margin-left: 0px;
+}
+
+.information-widget-search input {
+  background-color: black;
+  color: cyan !important;
+}
+
+.informaton-widgets border {
+  background-color: cyan;
+  color: cyan;
+}
+
+#myTab {
+  background-color: black;
+  border: var(--border-width) solid var(--widgets-border-color);
+  border-radius: var(--border-radius);
+}
+
+#tabs button {
+  background-color: black;
+  border-radius: var(--border-radius);
+}
+
+#tabs button[aria-selected="true"] {
+  background-color: black;
+  border: var(--border-width) solid var(--widgets-border-color);
+  border-radius: var(--border-radius);
+}
+
+#tabs button:not([aria-selected="true"]):hover {
+  background-color: #232336;
+}
+
+/* Static Borders - bookmarks */
+.bookmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  border: var(--border-width) solid var(--bookmarks-border-color);
+  border-radius: var(--border-radius);
+  background-color: black;
+  transition: border-color 0.3s ease;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+
+.bookmark-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.bookmark-text {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Static Borders - cards */
+.service-card {
+  border: var(--border-width) solid var(--cards-border-color);
+  border-radius: var(--border-radius);
+  background-color: black;
+  transition: border-color 0.3s ease;
+}
+
+.service-block {
+  background-color: black;
+  border: 2px solid cyan;
+}
+
+/*==================================
+  INTERACTIVE STYLES
+==================================*/
+
+/* Static Hover Effects */
+button[id$="-tab"]:hover,
+#information-widgets:hover,
+.service-card:hover,
+.bookmark:hover {
+  border-color: var(--hover-border-color);
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+/*==================================
+  LAYOUT STYLES
+==================================*/
+
+#footer {
+  display: none !important;
+}
+
+.bookmark-description {
+  display: none !important;
+}
+
+/*==================================
+  RESPONSIVE STYLES
+==================================*/
+
+@media screen and (max-width: 768px) {
+  #myTab {
+    padding: 5px;
+    background: none;
+    backdrop-filter: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  button[id$='-tab'] {
+    padding: 10px;
+    margin: 0;
+    width: calc(50% - 5px);
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  #widgets-wrap,
+  .service-card {
+    gap: 1em;
+  }
+
+  .information-widget-resource {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  #widgets-wrap,
+  .service-card {
+    gap: 1em;
+  }
+
+  .information-widget-resource {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* 
+==============================
+== OLD CATPPUCCIN MOCHA CSS ==
+==============================
+
 @import "https://userstyles.catppuccin.com/lib/lib.less";
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
@@ -488,3 +707,4 @@
                 color: var(--catppuccin-text);
         }
 }
+ */
