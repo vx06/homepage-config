@@ -54,23 +54,15 @@ layout:
 # Media Tab
   Mediaserver:
     tab: Media
-    style: row
-    columns: 3
+    style: column
 
-  File Storage:
+  Automation:
     tab: Media
-    style: row
-    columns: 3
-
-  Media Automation:
-    tab: Media
-    style: row
-    columns: 3
+    style: column
 
   Calendar:
     tab: Media
-    style: row
-    columns: 2
+    style: column
 
 # Services Tab
   Gaming:

@@ -8,7 +8,7 @@
     memory: false
 
 - logo:
-    icon: homepage
+    icon: sh-homepage-light.png
 
 - greeting:
     text_size: lg

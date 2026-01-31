@@ -3,10 +3,8 @@
 My dashboard configuration for [gethomepage/homepage](https://github.com/gethomepage/homepage/). Everything is set up with Docker Compose, environment variables and custom CSS.
 
 ## Work In Progress
-- [ ] Tdarr, slskd
-- [ ] authentik widget
-- [ ] Vikunja, Tandoor, miniflux, lubeloggerr
-- [ ] missing service widgets, custom apis, bookmarks
+- [ ] Tdarr, slskd, authentik, vikunja, miniflux, lubelogger
+- [ ] custom apis, bookmarks
 - [ ] improve env variable naming
 - [ ] themed icons
 - [ ] clean up custom.css file (catppuccin mocha part)

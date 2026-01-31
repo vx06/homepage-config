@@ -129,8 +129,6 @@
           url: "{{HOMEPAGE_VAR_BL_URL}}"
           username: "{{HOMEPAGE_VAR_BL_USR}}"
           password: "{{HOMEPAGE_VAR_BL_PW}}"
-
-- File Storage:
     - Immich:
         icon: sh-immich-light.png
         description: Images & Videos
@@ -163,7 +161,7 @@
           #authHeader: X-My-Header # If using Proxy header authentication
           fields: ["available", "used", "total"]
 
-- Media Automation:
+- Automation:
     - SABnzbd:
         href: "{{HOMEPAGE_VAR_SAB_HREF}}"
         icon: sh-sabnzbd-light.png
@@ -250,14 +248,14 @@
           timezone: Europe/Berlin # optional and only when timezone is not detected properly (slightly slower performance) - force timezone for ical events (if it's the same - no change, if missing or different in ical - will be converted to this timezone)
           integrations: # optional
             - type: sonarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-              service_group: Media Automation # group name where widget exists
+              service_group: Automation # group name where widget exists
               service_name: Sonarr # service name for that widget
               color: gray # optional - defaults to pre-defined color for the service (teal for sonarr)
               baseUrl: "{{HOMEPAGE_VAR_SONARR_HREF}}" # optional - adds links to sonarr/radarr pages
               params: # optional - additional params for the service
                 unmonitored: true # optional - defaults to false, used with *arr stack
             - type: radarr # active widget type that is currently enabled on homepage - possible values: radarr, sonarr, lidarr, readarr, ical
-              service_group: Media Automation # group name where widget exists
+              service_group: Automation # group name where widget exists
               service_name: Radarr # service name for that widget
               color: teal # optional - defaults to pre-defined color for the service (teal for sonarr)
               baseUrl: "{{HOMEPAGE_VAR_RADARR_HREF}}" # optional - adds links to sonarr/radarr pages
