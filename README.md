@@ -15,7 +15,7 @@ My dashboard configuration for [gethomepage/homepage](https://github.com/gethome
 
 ## Screenshots
 
-![Homepage Screenshot 1](./images/homepage_media.png)
+![Homepage Screenshot 1](./images/homepage_system.png.png)
 
 ## Get Started
 
