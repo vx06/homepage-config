@@ -82,7 +82,15 @@
           key: "{{HOMEPAGE_VAR_PG_KEY}}"
           org: "{{HOMEPAGE_VAR_PG_ORG}}"
           fields: ["sites","resources","in","out"]
-# NPM local https
+    - Nginx Proxymanager:
+        icon: sh-nginx-proxy-manager-light.png
+        description: Local Reverse Proxy
+        href: "{{HOMEPAGE_VAR_NPM_HREF}}"
+        widget:
+          type: npm
+          url: "{{HOMEPAGE_VAR_NPM_URL}}"
+          username: "{{HOMEPAGE_VAR_NPM_USER}}"
+          password: "{{HOMEPAGE_VAR_NPM_PASSWORD}}"
 
 
 - Mediaserver:
