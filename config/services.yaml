@@ -91,6 +91,7 @@
           url: "{{HOMEPAGE_VAR_NPM_URL}}"
           username: "{{HOMEPAGE_VAR_NPM_USER}}"
           password: "{{HOMEPAGE_VAR_NPM_PASSWORD}}"
+          fields: ["enabled", "disabled", "total"]
 
 
 - Mediaserver:
@@ -149,6 +150,18 @@
           url: "{{HOMEPAGE_VAR_NC_URL}}"
           key: "{{HOMEPAGE_VAR_NC_KEY}}"
           fields: ["freespace","activeusers","numfiles","numshares"]
+    - Filebrowser Quantum:
+        icon: sh-filebrowser-quantum-light.png
+        description: File Browser
+        href: "{{HOMEPAGE_VAR_FILEBROWSER_HREF}}"
+        widget:
+          type: filebrowser
+          hideErrors: true # seems to be incompatible with original filebrowser widget
+          url: "{{HOMEPAGE_VAR_FILEBROWSER_URL}}"
+          username: "{{HOMEPAGE_VAR_FILEBROWSER_USER}}"
+          password: "{{HOMEPAGE_VAR_FILEBROWSER_PASSWORD}}"
+          #authHeader: X-My-Header # If using Proxy header authentication
+          fields: ["available", "used", "total"]
 
 - Media Automation:
     - SABnzbd:
