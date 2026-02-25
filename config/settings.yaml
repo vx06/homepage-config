@@ -7,9 +7,9 @@
 title: "{{HOMEPAGE_VAR_TITLE}}"
 
 background:
-  image: https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg 
-#  #brightness: 1
-#  #blur: xs
+  image: "{{HOMEPAGE_VAR_BACKGROUND_URL}}"
+  brightness: 1
+  blur: xs
 
 color: gray
 

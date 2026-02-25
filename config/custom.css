@@ -1,217 +1,207 @@
-/* == NEW BLACK CYAN THEME CSS == */
 /*==================================
   FONT IMPORTS
 ==================================*/
-@import url('https://fonts.cdnfonts.com/css/jetbrains-mono');
-
-/*==================================
-  FONT FAMILY
-==================================*/
-:root {
-  --my-font: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Share+Tech+Mono&display=swap');
 
 /*==================================
   CSS VARIABLES
 ==================================*/
 :root {
-  --tabs-border-color: #00fcff;
-  --widgets-border-color: #00fcff;
-  --cards-border-color: #00fcff;
-  --bookmarks-border-color: #00fcff;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Share Tech Mono', monospace; 
+  
+  /* Colors - Tron Theme */
+  --cyan-main: #00ffff;
+  --cyan-dim: #0cbabf;
+  --cyan-glow: rgba(0, 255, 255, 0.6);
+  --bg-dark: #091014; 
+  
+  --widget-bg: rgba(9, 16, 20, 0.3);
+  
   --border-width: 2px;
-  --border-radius: .5rem;
-  --border-radius-btn: 0.1rem;
-  --animation-time: 10s;
+  --border-radius: 20px; 
+  --border-radius-btn: 12px;
+  --animation-time: 0.3s;
 }
 
 /*==================================
-  BASE STYLES
+  BASE STYLES & CRT OVERLAY
 ==================================*/
 
-/* Global Styles */
 * {
-  font-family: var(--my-font) !important;
-  color: #00fcff !important;
+  font-family: var(--font-body) !important;
+  color: var(--cyan-main) !important;
+  text-shadow: 0 0 2px rgba(0, 255, 255, 0.5); 
 }
 
-/* Background */
+h1, h2, h3, h4, h5, h6, .bookmark-text, #tabs button {
+  font-family: var(--font-heading) !important;
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px rgba(0, 255, 255, 0.6);
+}
+
+html, #__next, #page_container {
+  background-color: transparent !important;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--bg-dark) !important;
+  min-height: 100vh;
+  margin: 0;
+}
+
 #page_container {
-  background-color: #000000;
+  position: relative;
+  z-index: 10; 
+}
+
+/* CRT Scanline Effect */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  /* Schwarz-Wert von 0.15 auf 0.08 reduziert */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 4px, 6px 100%;
+  z-index: 9999;
+  pointer-events: none; 
+  transform: translateZ(0);
+}
+
+/* CRT Vignette */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0) 70%, rgba(0,0,0,0.4) 100%);
+  z-index: 9998;
+  pointer-events: none;
+  transform: translateZ(0);
 }
 
 /*==================================
   ELEMENT STYLES
 ==================================*/
 
-#information-widgets * {
-  color: cyan;
+.service-card, .bookmark, #myTab, .service-block {
+  background-color: var(--widget-bg) !important;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--border-width) solid var(--cyan-dim);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.15), inset 0 0 8px rgba(0, 255, 255, 0.05);
+  transition: all var(--animation-time) ease-in-out;
 }
 
-.border-b-2 {
-  border-bottom-color: cyan;
-}
-
-/* Logo size and positioning */
 .information-widget-logo img {
   width: 32px !important;  
   height: 32px !important;
   max-width: none;   
   max-height: none;     
   margin-left: 0px;
+  filter: drop-shadow(0 0 8px var(--cyan-main)); /* Logos strahlen jetzt auch mehr */
 }
 
 .information-widget-search input {
-  background-color: black;
-  color: cyan !important;
+  background-color: rgba(0,0,0,0.5);
+  border: 1px solid var(--cyan-dim);
+  border-radius: var(--border-radius-btn);
+  color: var(--cyan-main) !important;
+  box-shadow: inset 0 0 5px var(--cyan-glow);
 }
 
-.informaton-widgets border {
-  background-color: cyan;
-  color: cyan;
+.information-widget-search input:focus {
+  border-color: var(--cyan-main);
+  outline: none;
+  box-shadow: 0 0 10px var(--cyan-glow), inset 0 0 8px var(--cyan-glow);
 }
 
-#myTab {
-  background-color: black;
-  border: var(--border-width) solid var(--widgets-border-color);
-  border-radius: var(--border-radius);
-  padding: 8px;
-}
+#information-widgets * { color: var(--cyan-main); }
+#myTab { padding: 8px; }
 
 #tabs button {
-  background-color: black;
+  background-color: transparent;
   border-radius: var(--border-radius-btn);
-  padding-top: 4px;
-  margin: 0px 10px 0px 10px;
+  padding: 6px 12px;
+  margin: 0px 5px;
+  transition: all 0.3s;
 }
 
 #tabs button[aria-selected="true"] {
-  background-color: rgb(21, 21, 21);
-  border: var(--border-width) solid var(--widgets-border-color);
-  border-radius: var(--border-radius-btn);
+  background-color: rgba(0, 255, 255, 0.15);
+  border: var(--border-width) solid var(--cyan-main);
+  box-shadow: 0 0 12px var(--cyan-glow);
 }
 
 #tabs button:not([aria-selected="true"]):hover {
-  background-color: rgb(21, 21, 21);
+  background-color: rgba(0, 255, 255, 0.08);
+  border: var(--border-width) solid var(--cyan-dim);
 }
 
-/* Static Borders - bookmarks */
 .bookmark {
   display: flex;
   align-items: center;
   gap: 12px;
   min-height: 56px;
-  border: var(--border-width) solid var(--bookmarks-border-color);
-  border-radius: var(--border-radius);
-  background-color: black;
-  transition: border-color 0.3s ease;
   padding-top: 10px;
   margin-bottom: 8px;
 }
 
-.bookmark-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
+.bookmark a {
+  background-color: transparent !important;
+}
+
+.bookmark-icon,
+.bookmark-text { 
+  background-color: transparent !important;
 }
 
 .bookmark-text {
-  display: flex;
-  align-items: center;
-  background-color: black;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
 }
 
-/* Static Borders - cards */
-.service-card {
-  border: var(--border-width) solid var(--cards-border-color);
-  border-radius: var(--border-radius);
-  background-color: black;
-  transition: border-color 0.3s ease;
-}
-
-.service-block {
-  background-color: black;
-  border: 2px solid cyan;
-}
-
 /*==================================
-  INTERACTIVE STYLES
+  INTERACTIVE STYLES & ANIMATIONS
 ==================================*/
 
-/* Static Hover Effects */
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 4px var(--cyan-glow), inset 0 0 3px var(--cyan-glow); }
+  50% { box-shadow: 0 0 15px var(--cyan-main), inset 0 0 8px var(--cyan-main); border-color: #fff; }
+  100% { box-shadow: 0 0 4px var(--cyan-glow), inset 0 0 3px var(--cyan-glow); }
+}
+
 button[id$="-tab"]:hover,
-#information-widgets:hover,
 .service-card:hover,
 .bookmark:hover {
-  border-color: var(--hover-border-color);
-  transform: translateY(-1px);
-  transition: all 0.3s ease;
+  border-color: var(--cyan-main);
+  animation: neonPulse 1.5s infinite;
+  z-index: 10;
 }
 
-/*==================================
-  LAYOUT STYLES
-==================================*/
-
-#footer {
-  display: none !important;
+.service-card[data-status="up"] {
+  border-color: var(--cyan-main);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.25);
 }
 
-.bookmark-description {
-  display: none !important;
-  background-color: black;
-}
-
-/*==================================
-  RESPONSIVE STYLES
-==================================*/
+#footer, .bookmark-description { display: none !important; }
 
 @media screen and (max-width: 768px) {
   #myTab {
     padding: 5px;
     background: none;
     backdrop-filter: none;
+    border: none;
+    box-shadow: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-  }
-
-  button[id$='-tab'] {
-    padding: 10px;
-    margin: 0;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 850px) and (orientation: landscape) {
-  #widgets-wrap,
-  .service-card {
-    gap: 1em;
-  }
-
-  .information-widget-resource {
-    margin-left: 20px;
-    margin-right: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  #widgets-wrap,
-  .service-card {
-    gap: 1em;
-  }
-
-  .information-widget-resource {
-    margin-left: 20px;
-    margin-right: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
@@ -220,6 +210,7 @@ button[id$="-tab"]:hover,
 ==============================
 == OLD CATPPUCCIN MOCHA CSS ==
 ==============================
+/* Might be outdated, needs clean up of unused colors & variables */
 
 @import "https://userstyles.catppuccin.com/lib/lib.less";
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
