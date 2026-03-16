@@ -56,6 +56,7 @@
         href: "{{HOMEPAGE_VAR_TRACEARR_HREF}}"
         widget:
           type: tracearr
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_TRACEARR_URL}}"
           key: "{{HOMEPAGE_VAR_TRACEARR_KEY}}"
           view: both # optional, "summary", "details", or "both", defaults to "details"
@@ -68,6 +69,7 @@
         href: "{{HOMEPAGE_VAR_UPTIME_HREF}}"
         widget:
           type: uptimekuma
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_UPTIME_URL}}"
           slug: "{{HOMEPAGE_VAR_UPTIME_SLUG}}"
 - Management:
@@ -100,6 +102,7 @@
         href: "{{HOMEPAGE_VAR_NPM_HREF}}"
         widget:
           type: npm
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_NPM_URL}}"
           username: "{{HOMEPAGE_VAR_NPM_USER}}"
           password: "{{HOMEPAGE_VAR_NPM_PASSWORD}}"
@@ -113,6 +116,7 @@
         href: "{{HOMEPAGE_VAR_JF_HREF}}"
         widget:
           type: jellyfin
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_JF_URL}}"
           key: "{{HOMEPAGE_VAR_JF_KEY}}"
           enableBlocks: true # optional, defaults to false
@@ -127,26 +131,18 @@
         href: "{{HOMEPAGE_VAR_NAVI_HREF}}"
         widget:
           type: navidrome
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_NAVI_URL}}"
           user: "{{HOMEPAGE_VAR_NAVI_USR}}"
           token: "{{HOMEPAGE_VAR_NAVI_TOKEN}}" #md5(password + salt)
           salt: "{{HOMEPAGE_VAR_NAVI_SALT}}"
-    - Booklore:
-        description: eBooks
-        icon: sh-booklore-light.png
-        href: "{{HOMEPAGE_VAR_BL_HREF}}"
-        widget:
-          type: booklore
-          hideErrors: true
-          url: "{{HOMEPAGE_VAR_BL_URL}}"
-          username: "{{HOMEPAGE_VAR_BL_USR}}"
-          password: "{{HOMEPAGE_VAR_BL_PW}}"
     - Immich:
         icon: sh-immich-light.png
         description: Images & Videos
         href: "{{HOMEPAGE_VAR_IMMICH_HREF}}"
         widget:
           type: immich
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_IMMICH_URL}}"
           key: "{{HOMEPAGE_VAR_IMMICH_KEY}}"
           version: 2 # optional, default is 1
@@ -157,6 +153,7 @@
         href: "{{HOMEPAGE_VAR_NC_HREF}}"
         widget:
           type: nextcloud
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_NC_URL}}"
           key: "{{HOMEPAGE_VAR_NC_KEY}}"
           fields: ["freespace","activeusers","numfiles","numshares"]
@@ -180,6 +177,7 @@
         description: News Reader
         widget:
           type: sabnzbd
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_SAB_URL}}"
           key: "{{HOMEPAGE_VAR_SAB_KEY}}"
           fields: ["rate", "queue", "timeleft"]
@@ -203,6 +201,7 @@
         description: Media Requests
         widget:
           type: jellyseerr
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_SEERR_URL}}"
           key: "{{HOMEPAGE_VAR_SEERR_KEY}}"
           fields: ["pending", "approved", "available", "issues"]
@@ -213,6 +212,7 @@
         description: Search Automation
         widget:
           type: prowlarr
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_PROWLARR_URL}}"
           key: "{{HOMEPAGE_VAR_PROWLARR_KEY}}"
           fields: ["numberOfGrabs", "numberOfQueries", "numberOfFailGrabs", "numberOfFailQueries"]
@@ -223,6 +223,7 @@
         description: Movie Automation
         widget:
           type: radarr
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_RADARR_URL}}"
           key: "{{HOMEPAGE_VAR_RADARR_KEY}}"
           enableQueue: true # optional, defaults to false
@@ -234,20 +235,25 @@
         description: Series Automation
         widget:
           type: sonarr
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_SONARR_URL}}"
           key: "{{HOMEPAGE_VAR_SONARR_KEY}}"
           enableQueue: true # optional, defaults to false
           fields: ["wanted", "queued", "series"]
-    
+
+    # Move to Readarr alternatives (chaptarr?)
     - Readarr:
         href: "{{HOMEPAGE_VAR_READARR_HREF}}"
         icon: sh-readarr-light.png
         description: Book Automation
         widget:
           type: readarr
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_READARR_URL}}"
           key: "{{HOMEPAGE_VAR_READARR_KEY}}"
           fields: ["wanted", "queued", "books"]
+
+    # Todo: Lidarr or alternative
 
 - Calendar:
     - Calendar:
@@ -274,7 +280,6 @@
               params: # optional - additional params for the service
                 unmonitored: true # optional - defaults to false, used with *arr stack
 
-
 - Networking:
     - FritzBox:
         icon: sh-fritz-light.png
@@ -293,6 +298,7 @@
         href: "{{HOMEPAGE_VAR_AH_HREF}}"
         widget:
           type: adguard
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_AH_URL}}"
           username: "{{HOMEPAGE_VAR_AH_USR}}"
           password: "{{HOMEPAGE_VAR_AH_PW}}"
@@ -326,6 +332,7 @@
         href: "{{HOMEPAGE_VAR_FIII_HREF}}"
         widget:
           type: firefly
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_FIII_URL}}"
           key: "{{HOMEPAGE_VAR_FIII_KEY}}"
           fields: ["budget", "networth"]
@@ -370,6 +377,7 @@
         icon: sh-tandoor-recipes-light.png
         widget:
           type: tandoor
+          hideErrors: true
           url: "{{HOMEPAGE_VAR_TANDOOR_URL}}"
           key: "{{HOMEPAGE_VAR_TANDOOR_KEY}}"
 
