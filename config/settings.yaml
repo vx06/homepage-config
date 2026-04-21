@@ -77,3 +77,8 @@ layout:
   Productivity:
     tab: Services
     style: column
+
+  All:
+    tab: Other
+    style: row
+    columns: 6

@@ -381,3 +381,308 @@
           url: "{{HOMEPAGE_VAR_TANDOOR_URL}}"
           key: "{{HOMEPAGE_VAR_TANDOOR_KEY}}"
 
+- All:
+    - 13ft:
+        description: Bypass Paywalls
+        href: "{{HOMEPAGE_VAR_13FT_HREF}}"
+        icon: sh-ladder-light.png
+    - Anonymous Overflow:
+        description: Recipe Management
+        href: "{{HOMEPAGE_VAR_OVERFLOW_HREF}}"
+        icon: sh-anonymousoverflow-light.png
+    - BentoPDF:
+        description: PDF Tools
+        href: "{{HOMEPAGE_VAR_BENTOPDF_HREF}}"
+        icon: sh-bentopdf-light.png
+    - Biblioreads:
+        description: Goodreads Frontend
+        href: "{{HOMEPAGE_VAR_READS_HREF}}"
+        icon: sh-biblioreads-light.png
+    - Binternet:
+        description: Pinterest Frontend
+        href: "{{HOMEPAGE_VAR_BINTERNET_HREF}}"
+        icon: sh-pinterest-light.png
+    - Breezewiki:
+        description: Fandom Wiki Frontend
+        href: "{{HOMEPAGE_VAR_BREEZEWIKI_HREF}}"
+        icon: sh-fandom-light.png
+    - Code-Server:
+        description: Vscode Web
+        href: "{{HOMEPAGE_VAR_CODESERVER_HREF}}"
+        icon: sh-visual-studio-code-light.png
+    - Coolify:
+        description: Deployment Platform
+        href: "{{HOMEPAGE_VAR_COOLIFY_HREF}}"
+        icon: sh-coolify-light.png
+    - CyberChef:
+        description: IT Tools
+        href: "{{HOMEPAGE_VAR_CYBERCHEF_HREF}}"
+        icon: sh-cyberchef-light.png
+    - Dumb:
+        description: Genius Frontend
+        href: "{{HOMEPAGE_VAR_DUMB_HREF}}"
+        icon: sh-dumb-genius-light.png
+    - Excalidraw:
+        description: Diagrams
+        href: "{{HOMEPAGE_VAR_EXCALIDRAW_HREF}}"
+        icon: sh-excalidraw-light.png
+    - Fireshare:
+        description: Gaming Clips
+        href: "{{HOMEPAGE_VAR_FIRESHARE_HREF}}"
+        icon: sh-fireshare-light.png
+    - Glance:
+        description: Feed Aggregation Dashboard
+        href: "{{HOMEPAGE_VAR_GLANCE_HREF}}"
+        icon: sh-glance-light.png
+    - GoCook:
+        description: Chefkoch Frontend
+        href: "{{HOMEPAGE_VAR_GOCOOK_HREF}}"
+        icon: sh-cooklang-chef-light.png
+    - Gothub:
+        description: Github Frontend
+        href: "{{HOMEPAGE_VAR_GOTHUB_HREF}}"
+        icon: sh-github-light.png
+    - Haus:
+        description: Productivity
+        href: "{{HOMEPAGE_VAR_HAUS_HREF}}"
+        icon: sh-haus-light.png
+    - IT Tools:
+        description: IT Tools
+        href: "{{HOMEPAGE_VAR_TOOLS_HREF}}"
+        icon: sh-it-tools-light.png
+    - Invidious:
+        description: YouTube Frontend
+        href: "{{HOMEPAGE_VAR_INVIDIOUS_HREF}}"
+        icon: sh-invidious-light.png
+    - LibreMDB:
+        description: IMDB Frontend
+        href: "{{HOMEPAGE_VAR_LIBREMDB_HREF}}"
+        icon: sh-imdb-light.png
+    - LibreTranslate:
+        description: Translation
+        href: "{{HOMEPAGE_VAR_LIBRETRANSLATE_HREF}}"
+        icon: sh-libretranslate-light.png
+    - Materialious:
+        description: Invidious Frontend
+        href: "{{HOMEPAGE_VAR_MATERIALIOUS_HREF}}"
+        icon: sh-materialious-light.png
+    - Monkeytype:
+        description: Typing Test
+        href: "{{HOMEPAGE_VAR_MONKEYTYPE_HREF}}"
+        icon: si-monkeytype
+    - Mumble:
+        description: Teamspeak Alternative
+        href: "{{HOMEPAGE_VAR_MUMBLE_HREF}}"
+        icon: sh-mumble-light.png
+    - Open WebUI:
+        description: LLM Frontend
+        href: "{{HOMEPAGE_VAR_OPENWEBUI_HREF}}"
+        icon: sh-open-webui-light.png
+    - Overleaf:
+        description: LaTex Editor
+        href: "{{HOMEPAGE_VAR_OVERLEAF_HREF}}"
+        icon: sh-overleaf-light.png
+    - Owncast:
+        description: Livestreaming
+        href: "{{HOMEPAGE_VAR_OWNCAST_HREF}}"
+        icon: sh-owncast-light.png
+    - Quetre:
+        description: Quora Frontend
+        href: "{{HOMEPAGE_VAR_QUETRE_HREF}}"
+        icon: sh-quetre-light.png
+    - Rackula:
+        description: Serverrack Builder
+        href: "{{HOMEPAGE_VAR_RACKULA_HREF}}"
+        icon: sh-rackula-light.png
+    - Rimgo:
+        description: Imgur Frontend
+        href: "{{HOMEPAGE_VAR_RIMGO_HREF}}"
+        icon: si-imgur
+    - Scribe:
+        description: Medium Frontend
+        href: "{{HOMEPAGE_VAR_SCRIBE_HREF}}"
+        icon: si-medium
+    - Tent:
+        description: Bandcamp Frontend
+        href: "{{HOMEPAGE_VAR_TENT_HREF}}"
+        icon: sh-bandcamp-light.png
+    - Tuxmate:
+        description: Ninite for Linux
+        href: "{{HOMEPAGE_VAR_TUXMATE_HREF}}"
+        icon: sh-linux-light.png
+    - Wikiless:
+        description: Wikipedia Frontend
+        href: "{{HOMEPAGE_VAR_WIKILESS_HREF}}"
+        icon: sh-wikipedia-light.png
+    - YamTrack:
+        description: Media Tracking
+        href: "{{HOMEPAGE_VAR_YAMTRACK_HREF}}"
+        icon: sh-yamtrack-light.png
+    - Anki:
+        description: Anki Syncserver
+        href: "{{HOMEPAGE_VAR_ANKI_HREF}}"
+        icon: sh-anki-light.png
+    - Drawio:
+        description: Diagrams
+        href: "{{HOMEPAGE_VAR_DRAWIO_HREF}}"
+        icon: sh-draw-io-light.png
+    - FMHY:
+        description: FMHY Wiki
+        href: "{{HOMEPAGE_VAR_FMHY_HREF}}"
+        icon: si-vlcmediaplayer
+    - Forgejo:
+        description: Git
+        href: "{{HOMEPAGE_VAR_FORGEJO_HREF}}"
+        icon: sh-forgejo-light.png
+    - Ladder:
+        description: Paywall Bypass
+        href: "{{HOMEPAGE_VAR_LADDER_HREF}}"
+        icon: sh-ladder-light.png
+    - Mazanoke:
+        description: Image Tools
+        href: "{{HOMEPAGE_VAR_MAZANOKE_HREF}}"
+        icon: sh-bandcamp-light.png
+    - Meme-Search:
+        description: Meme Collection
+        href: "{{HOMEPAGE_VAR_MEMESEARCH_HREF}}"
+        icon: sh-bandcamp-light.png
+    - Moodist:
+        description: Ambient Sounds
+        href: "{{HOMEPAGE_VAR_MOODIST_HREF}}"
+        icon: sh-moodist-light.png
+    - Mozhi:
+        description: Translation
+        href: "{{HOMEPAGE_VAR_MOZHI_HREF}}"
+        icon: sh-libretranslate-light.png
+    - Myip:
+        description: IT Tools
+        href: "{{HOMEPAGE_VAR_MYIP_HREF}}"
+        icon: sh-myip-light.png
+    - Neko:
+        description: Virtual Browser
+        href: "{{HOMEPAGE_VAR_NEKO_HREF}}"
+        icon: sh-neko-light.png
+    - Networking-Toolbox:
+        description: IT Tools
+        href: "{{HOMEPAGE_VAR_TOOLBOX_HREF}}"
+        icon: sh-networking-toolbox-light.png
+    - Omni-Tools:
+        description: IT Tools
+        href: "{{HOMEPAGE_VAR_OMNI_HREF}}"
+        icon: sh-it-tools-light.png
+    - Pocket-ID:
+        description: Identity Management
+        href: "{{HOMEPAGE_VAR_POCKETID_HREF}}"
+        icon: sh-pocket-id-light.png
+    - Redlib:
+        description: Reddit Frontend
+        href: "{{HOMEPAGE_VAR_REDLIB_HREF}}"
+        icon: sh-redlib-light.png
+    - Runtipi:
+        description: Oneclick Deployments
+        href: "{{HOMEPAGE_VAR_RUNTIPI_HREF}}"
+        icon: sh-runtipi-light.png
+    - SearXNG:
+        description: Search Engine
+        href: "{{HOMEPAGE_VAR_SEARXNG_HREF}}"
+        icon: sh-searxng-light.png
+    - Shoelace:
+        description: Threads Frontend
+        href: "{{HOMEPAGE_VAR_SHOELACE_HREF}}"
+        icon: sh-threads-light.png
+    - Vert:
+        description: File Converter
+        href: "{{HOMEPAGE_VAR_VERT_HREF}}"
+        icon: sh-vert-light.png
+    - Beszel:
+        description: Monitoring
+        href: "{{HOMEPAGE_VAR_BESZEL_HREF}}"
+        icon: sh-beszel-light.png
+    - Tracearr:
+        icon: sh-tracearr-light.png
+        description: Media Server Monitoring
+        href: "{{HOMEPAGE_VAR_TRACEARR_HREF}}"
+    - Uptime Kuma:
+        icon: sh-uptime-kuma-light.png
+        description: Uptime Monitoring
+        href: "{{HOMEPAGE_VAR_UPTIME_HREF}}"
+    - Komodo:
+        icon: sh-komodo-light.png
+        description: Docker Management
+        href: "{{HOMEPAGE_VAR_KOMODO_HREF}}"
+    - Pangolin:
+        icon: sh-pangolin-light.png
+        description: Reverse Proxy
+        href: "{{HOMEPAGE_VAR_PG_HREF}}"
+    - Jellyfin:
+        icon: sh-jellyfin-light.png
+        description: Movies & TV Shows
+        href: "{{HOMEPAGE_VAR_JF_HREF}}"
+    - Navidrome:
+        icon: sh-navidrome-light.png
+        description: Music
+        href: "{{HOMEPAGE_VAR_NAVI_HREF}}"
+    - Immich:
+        icon: sh-immich-light.png
+        description: Images & Videos
+        href: "{{HOMEPAGE_VAR_IMMICH_HREF}}"
+    - Nextcloud:
+        icon: sh-nextcloud-light.png
+        description: File Storage
+        href: "{{HOMEPAGE_VAR_NC_HREF}}"
+    - Filebrowser Quantum:
+        icon: sh-filebrowser-quantum-light.png
+        description: File Browser
+        href: "{{HOMEPAGE_VAR_FILEBROWSER_HREF}}"
+    - SABnzbd:
+        href: "{{HOMEPAGE_VAR_SAB_HREF}}"
+        icon: sh-sabnzbd-light.png
+        description: News Reader
+    - qBittorrent:
+        href: "{{HOMEPAGE_VAR_QBIT_HREF}}"
+        description: Linux ISO Downloader
+        icon: sh-qbittorrent-light.png
+    - Jellyseerr:
+        href: "{{HOMEPAGE_VAR_SEERR_HREF}}"
+        icon: sh-jellyseerr-light.png
+        description: Media Requests
+    - Prowlarr:
+        href: "{{HOMEPAGE_VAR_PROWLARR_HREF}}"
+        icon: sh-prowlarr-light.png
+        description: Search Automation
+    - Radarr:
+        href: "{{HOMEPAGE_VAR_RADARR_HREF}}"
+        icon: sh-radarr-light.png
+        description: Movie Automation
+    - Sonarr:
+        href: "{{HOMEPAGE_VAR_SONARR_HREF}}"
+        icon: sh-sonarr-light.png
+        description: Series Automation    
+    - Adguard:
+        icon: sh-adguard-home-light.png
+        description: DNS
+        href: "{{HOMEPAGE_VAR_AH_HREF}}"
+    - Wireguard:
+        icon: sh-wireguard-light.png
+        description: Home VPN
+        href: "{{HOMEPAGE_VAR_WG_URL}}"
+    - Ghostfolio:
+        icon: sh-ghostfolio-light.png
+        description: Portfolio
+        href: "{{HOMEPAGE_VAR_GF_HREF}}"
+    - Firefly:
+        icon: sh-firefly-iii-light.png
+        description: Cash
+        href: "{{HOMEPAGE_VAR_FIII_HREF}}"
+    - Wallos:
+        icon: sh-wallos-light.png
+        description: Subscriptions
+        href: "{{HOMEPAGE_VAR_WALLOS_HREF}}"
+    - Karakeep:
+        description: Bookmarks
+        icon: sh-karakeep-light.png
+        href: "{{HOMEPAGE_VAR_KARAKEEP_HREF}}"
+    - Tandoor:
+        description: Recipe Management
+        href: "{{HOMEPAGE_VAR_TANDOOR_HREF}}"
+        icon: sh-tandoor-recipes-light.png
