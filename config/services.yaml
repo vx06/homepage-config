@@ -72,6 +72,17 @@
           hideErrors: true
           url: "{{HOMEPAGE_VAR_UPTIME_URL}}"
           slug: "{{HOMEPAGE_VAR_UPTIME_SLUG}}"
+    - Ntfy:
+        icon: sh-ntfy-light.png
+        description: Notification Service
+        href: "{{HOMEPAGE_VAR_NTFY_HREF}}"
+        widget:
+          type: ntfy
+          hideErrors: true
+          url: "{{HOMEPAGE_VAR_NTFY_URL}}"
+          topic: "{{HOMEPAGE_VAR_NTFY_TOPIC}}"
+          key: "{{HOMEPAGE_VAR_NTFY_TOKEN}}"
+          fields: ["title", "message", "lastReceived"]
 - Management:
     - Komodo:
         icon: sh-komodo-light.png
@@ -370,6 +381,19 @@
           url: "{{HOMEPAGE_VAR_KARAKEEP_URL}}"
           key: "{{HOMEPAGE_VAR_KARAKEEP_KEY}}"
           fields: ["bookmarks", "archived", "lists", "tags"]
+
+    - Vikunja:
+        description: Tasks Management
+        icon: sh-vikunja-light.png
+        href: "{{HOMEPAGE_VAR_VIKUNJA_HREF}}"
+        widget:
+          type: vikunja
+          hideErrors: true
+          url: "{{HOMEPAGE_VAR_VIKUNJA_URL}}"
+          key: "{{HOMEPAGE_VAR_VIKUNJA_KEY}}"
+          fields: ["projects", "tasks7d", "tasksOverdue", "tasksInProgress"]
+          enableTaskList: true
+          version: 2
 
     - Tandoor:
         description: Recipe Management

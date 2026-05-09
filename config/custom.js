@@ -28,7 +28,7 @@ function initCyberRain() {
     });
 
     const chars = '01'.split(''); 
-    const fontSize = 14;
+    const fontSize = 24;
     const columns = Math.floor(width / fontSize); 
     const drops = [];
 
@@ -60,7 +60,7 @@ function initCyberRain() {
         }
     }
 
-    setInterval(draw, 50);
+    setInterval(draw, 80);
 }
 
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
@@ -69,4 +69,4 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
     document.addEventListener("DOMContentLoaded", initCyberRain);
 }
 
-setTimeout(initCyberRain, 1000);
+setTimeout(initCyberRain, 1500);
