@@ -7,7 +7,7 @@
 title: "{{HOMEPAGE_VAR_TITLE}}"
 
 background:
-  #image: "{{HOMEPAGE_VAR_BACKGROUND_URL}}"
+  image: "{{HOMEPAGE_VAR_BACKGROUND_URL}}"
   brightness: 1
   blur: xs
 
