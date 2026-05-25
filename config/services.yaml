@@ -107,17 +107,15 @@
           key: "{{HOMEPAGE_VAR_PG_KEY}}"
           org: "{{HOMEPAGE_VAR_PG_ORG}}"
           fields: ["sites","resources","in","out"]
-    - Nginx Proxymanager:
-        icon: sh-nginx-proxy-manager-light.png
+    - Caddy:
+        icon: sh-caddy-light.png
         description: Local Reverse Proxy
-        href: "{{HOMEPAGE_VAR_NPM_HREF}}"
+        href: "{{HOMEPAGE_VAR_CADDY_HREF}}"
         widget:
-          type: npm
+          type: caddy
           hideErrors: true
-          url: "{{HOMEPAGE_VAR_NPM_URL}}"
-          username: "{{HOMEPAGE_VAR_NPM_USER}}"
-          password: "{{HOMEPAGE_VAR_NPM_PASSWORD}}"
-          fields: ["enabled", "disabled", "total"]
+          url: "{{HOMEPAGE_VAR_CADDY_URL}}"
+          fields: ["upstreams", "requests", "requests_failed"]
 
 
 - Mediaserver:
