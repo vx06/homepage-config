@@ -8,11 +8,11 @@
     memory: false
 
 - logo:
-    icon: sh-homepage-light.png
+    icon: https://share.moneten.cc/u/panther.png
 
 - greeting:
     text_size: lg
-    text: Homelab
+    text: PantherLab
 
 #- search:
 #    provider: custom # google, duckduckgo, bing, baidu, brave or custom
