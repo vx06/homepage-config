@@ -2,13 +2,8 @@
 
 My dashboard configuration for [gethomepage/homepage](https://github.com/gethomepage/homepage/). Everything is set up with Docker Compose, environment variables and custom CSS.
 
-## Work In Progress
-- [ ] Tdarr, slskd, authentik, miniflux, lubelogger
-- [ ] improve env variable naming
-- [ ] themed icons
-- [ ] maybe go back to old custom css (catpuccin mocha or black-cyan)
+Now back to catppuccin mocha custom css.
 
-Had the idea of implementing a theme switcher to switch between multiple custom themes but never had the time for it. If you want to check the previous themes just check the git history of the custom.css file, current theme was from a reddit user on r/selfhosted, the previous ones were my attempts for some themes.
 
 ## Screenshots
 
@@ -67,11 +62,11 @@ Here is a list of some environment variables and their meaning from my configura
 
 ### Custom Theme
 
-currently from a reddit user, previous themes can be found in the git history.
-
 You can customize the `custom.css` file to your liking.
 
-catppuccin mocha wallpapers by [orangci](https://github.com/orangci) can be found [here](https://github.com/orangci/walls-catppuccin-mocha).
+
+Previously used catppuccin mocha wallpapers by [orangci](https://github.com/orangci) can be found [here](https://github.com/orangci/walls-catppuccin-mocha).
+Currently using the mocha curst color as the background.
 
 ## License
 
